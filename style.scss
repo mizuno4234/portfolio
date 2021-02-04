@@ -1,0 +1,243 @@
+$backColor:rgb(0, 0, 0);
+$headerColor:#000000;
+$titleShadow:4px 3px 3px rgb(105, 112, 112);
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+    a {
+        background: #666;
+        text-decoration: none;
+        color: #fff;
+        width: 100px;
+        padding: 30px 0;
+        text-align: center;
+        display: block;
+        border-radius: 5px;
+        transition: all 0.5s;
+        z-index: 999;
+        &:hover {
+            text-decoration: none;
+            color: black;
+            background: #999;
+        }
+    }
+}
+body {
+    //font-family:"Quicksand", sans-serif;
+    font-family: "Objective-bold", sans-serif;
+    background-color:$backColor;
+}
+.container {
+    width: 100%;
+    height: 1080px;
+    color: white;
+    border-bottom:solid 1px white;
+}
+header {
+    .container {
+        display: flex;
+        height: 65px;
+        background-color:$headerColor;
+        position:fixed;
+        top:0px;
+        z-index: 10;
+        border: none;
+    }
+    .header-left{
+        border-radius: 50% white;
+        img{
+            transition: all 0.5s;
+            &:hover{
+                transform:translateY(10px);
+            }
+            ::after{
+                opacity: 1;
+            }
+        }
+    }
+    .header-right {
+        margin-left:auto;
+        margin-right: 40px;
+        margin-top:35px;
+        letter-spacing: 2.1px;
+        transition: all 10s;
+        display: flex;
+        span {
+            display: block;
+            height: 30px;
+            width: 1px;
+            background: white;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        a {
+            line-height: 30px;
+            display: block;
+            text-decoration: none;
+            color:white;
+            padding: 0 15px;
+            transition: all 1s;
+            &:hover{
+                //box-shadow: inset 0 0 5px;
+                background-color:#cacaca;
+                text-shadow: 2px 2px 3px #000;
+                color: black;
+            }
+        }
+    }
+}
+.logo {
+    height: 60px;
+    margin-top:2.5px;
+    margin-left: 35px;
+}
+.top-wrapper {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    .container {
+        h1{
+            //color: white;
+            padding-top: 465px;
+            display: none;
+            font-size:120px;
+            //text-shadow:$titleShadow;
+            color: #111;
+            -webkit-text-stroke: 1px #fff;
+        }
+    }
+}
+.sub-title {
+    padding-top: 50px;
+    font-size: 70px;
+    text-align: center;
+    //text-shadow:$titleShadow;
+    color: #111;
+    -webkit-text-stroke: 1px #fff;
+}
+.about-wrapper {
+    .container {
+        text-align: center;       
+        .about {
+            margin-top: 150px;
+            display: flex;
+            .about-info {
+                margin: 0 auto;
+                display: column;
+                font-family: "Spectral", serif;
+                .myName {
+                    margin-top: 0;
+                    font-size: 80px;
+                }
+                p {
+                    margin-top:20px;
+                    font-size: 20px;
+                }
+            }
+        }
+        a {
+            display: block;
+            margin-top: 130px;
+            font-size: 30px;
+            color: white;
+            transition: all 0.5s;
+            &:hover{
+                color: rgb(105, 160, 34);
+            }
+            font-family: "Spectral", serif;
+        }
+    }
+}
+.works-wrapper {
+    .container {
+        .sub-container{
+            display: flex;
+            .left-margin {
+                width: 25%;
+                
+            }
+            .right-margin{
+                width: 25%;
+            }
+            .worksFolder{
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                height: 25%;
+                //background-color: chartreuse;
+                
+                .workList{
+                    margin: 0 auto;
+                    margin-top:50px;
+                    height: 270px;
+                    //width: 325px;
+                    width:450px;
+                    display: column;
+                    //background-color: cornflowerblue;
+                    .workImg{
+                        height: 240px;
+                        background: white;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                
+                        &:hover{
+                            transform: translateY(-10px);
+                        }
+                    }
+                    p {
+                        font-family: "Spectral", serif;
+                        font-size: 20px;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.contactform {
+    color:white;
+    margin-top:3288px;
+    letter-spacing: 2.1px;
+    h2 {
+        border-bottom: solid 1px white ;
+        margin-bottom:20px;
+    }
+    input{
+        margin-bottom:30px;
+        border: solid 1px rgb(173, 165, 165);
+        width:100%;
+        height: 45px;
+        background-color:white;
+        &.contents{
+            height:120px;
+        }
+        &.submit{
+            background-color: rgb(129, 125, 125);
+            font-size: 30px;
+            &:hover{
+                background-color: rgb(184, 159, 159);
+            }
+        }
+    }
+}
+footer {
+    text-align: center;
+    letter-spacing: 2.1px;
+    color: rgb(255, 255, 255);
+}
+.far {
+    color:white;
+}
+//JQuery Class
+.fadein {
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+.shadow_img {
+    //drop-shadow(左右の位置px 上下の位置px ぼかし具合px 色); ※透過PNGかSVGのみ
+    filter: drop-shadow(5px 5px 5px #aaa);
+}

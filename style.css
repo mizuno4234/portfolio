@@ -1,0 +1,281 @@
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+}
+
+#page-top a {
+  background: #666;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  padding: 30px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 999;
+}
+
+#page-top a:hover {
+  text-decoration: none;
+  color: black;
+  background: #999;
+}
+
+body {
+  font-family: "Objective-bold", sans-serif;
+  background-color: black;
+}
+
+.container {
+  width: 100%;
+  height: 1080px;
+  color: white;
+  border-bottom: solid 1px white;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 65px;
+  background-color: #000000;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  border: none;
+}
+
+header .header-left {
+  border-radius: 50% white;
+}
+
+header .header-left img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .header-left img:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+header .header-left img ::after {
+  opacity: 1;
+}
+
+header .header-right {
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 35px;
+  letter-spacing: 2.1px;
+  -webkit-transition: all 10s;
+  transition: all 10s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-right span {
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header .header-right a {
+  line-height: 30px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+header .header-right a:hover {
+  background-color: #cacaca;
+  text-shadow: 2px 2px 3px #000;
+  color: black;
+}
+
+.logo {
+  height: 60px;
+  margin-top: 2.5px;
+  margin-left: 35px;
+}
+
+.top-wrapper {
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper .container h1 {
+  padding-top: 465px;
+  display: none;
+  font-size: 120px;
+  color: #111;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.sub-title {
+  padding-top: 50px;
+  font-size: 70px;
+  text-align: center;
+  color: #111;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.about-wrapper .container {
+  text-align: center;
+}
+
+.about-wrapper .container .about {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-wrapper .container .about .about-info {
+  margin: 0 auto;
+  display: column;
+  font-family: "Spectral", serif;
+}
+
+.about-wrapper .container .about .about-info .myName {
+  margin-top: 0;
+  font-size: 80px;
+}
+
+.about-wrapper .container .about .about-info p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.about-wrapper .container a {
+  display: block;
+  margin-top: 130px;
+  font-size: 30px;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: "Spectral", serif;
+}
+
+.about-wrapper .container a:hover {
+  color: #69a022;
+}
+
+.works-wrapper .container .sub-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.works-wrapper .container .sub-container .left-margin {
+  width: 25%;
+}
+
+.works-wrapper .container .sub-container .right-margin {
+  width: 25%;
+}
+
+.works-wrapper .container .sub-container .worksFolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+}
+
+.works-wrapper .container .sub-container .worksFolder .workList {
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 270px;
+  width: 450px;
+  display: column;
+}
+
+.works-wrapper .container .sub-container .worksFolder .workList .workImg {
+  height: 240px;
+  background: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.works-wrapper .container .sub-container .worksFolder .workList .workImg:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.works-wrapper .container .sub-container .worksFolder .workList p {
+  font-family: "Spectral", serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contactform {
+  color: white;
+  margin-top: 3288px;
+  letter-spacing: 2.1px;
+}
+
+.contactform h2 {
+  border-bottom: solid 1px white;
+  margin-bottom: 20px;
+}
+
+.contactform input {
+  margin-bottom: 30px;
+  border: solid 1px #ada5a5;
+  width: 100%;
+  height: 45px;
+  background-color: white;
+}
+
+.contactform input.contents {
+  height: 120px;
+}
+
+.contactform input.submit {
+  background-color: #817d7d;
+  font-size: 30px;
+}
+
+.contactform input.submit:hover {
+  background-color: #b89f9f;
+}
+
+footer {
+  text-align: center;
+  letter-spacing: 2.1px;
+  color: white;
+}
+
+.far {
+  color: white;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.shadow_img {
+  -webkit-filter: drop-shadow(5px 5px 5px #aaa);
+          filter: drop-shadow(5px 5px 5px #aaa);
+}
+/*# sourceMappingURL=style.css.map */
