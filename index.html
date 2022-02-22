@@ -6,8 +6,10 @@
     <!--viewport：メディアクエリを適用するため-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!--リセットCSS読み込み-->
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel='stylesheet' href='./style.css'>
+    <!--自作CSS読み込み-->
+    <link rel='stylesheet' href='./css/style.css'>
     <!--フォント読み込み-->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!--source読み込み-->
@@ -22,10 +24,10 @@
     <p id="page-top"><a href="#top">PAGE TOP</a></p>
     <header>
         <div class="container">
-            <div class="header-left">
+            <div class="header-left fadein-menu">
                 <img src="./img/logo.png" class="logo">
             </div>
-            <div class="header-right">
+            <div class="header-right fadein-menu">
                 <span></span>
                 <a href="#about" class="about">ABOUT</a>
                 <span></span>
@@ -38,7 +40,7 @@
     </header>
     <div class="top-wrapper" id="top">
         <div class="container">
-            <h1 class="type">／Keisuke portfolio.</h1>
+            <h1 class="type">／Mizuno's portfolio<span class="title">.</span></h1>
         </div>
     </div>
     <div class="about-wrapper" id="about">
@@ -99,23 +101,61 @@
     </div>
     <div class="contact-wrapper" id="contact">
         <div class="container">
-            <div class="contactform">
-                <h2 class="far fa-envelope"> Contact</h2>
-                <p>/Your name</p>
-                <input type="text">
-                <p>/e-mail address</p> 
-                <input type="text"/>
-                <p>/Inquiry Contents</p>
-                <input type="text" class="contents">
-                <br>
-                <input type="submit" class="submit" value="submit">
+            <h2 class="sub-title fadein">- Contact -</h2>
+            <p class="catch fadein">It's my life, I'll do what I want.</p>
+            <p class="sub-catch fadein">自分の人生だから、自分のやりたいことをする。</p>
+            <div class="form-container fadein">
+                <div class="form-item">
+                    <table>
+                        <tr>
+                            <th class="label-name"><p>NAME</p></th>
+                            <td><input type="text" class="form-name"></td>
+                        </tr>
+                        <tr>
+                            <th class="label-Email"><p>E-mail</p></th>
+                            <td><input type="email" class="form-email"></td>
+                            <td><p>@</p></td>
+                            <td>
+                                <select class="form-domain">
+                                    <option value="1">ezweb.ne.jp</option>
+                                    <option value="2">yahoo.co.jp</option>
+                                    <option value="3">gmail.com</option>
+                                    <option value="4">ezweb.ne.jp</option>
+                                    <option value="5">au.com</option>
+                                    <option value="6">docomo.ne.jp</option>
+                                    <option value="7">i.softbank.jp</option>
+                                    <option value="8">softbank.ne.jp</option>
+                                    <option value="9">excite.co.jp</option>
+                                    <option value="10">googlemail.com</option>
+                                    <option value="11">hotmail.co.jp</option>
+                                    <option value="12">hotmail.com</option>
+                                    <option value="13">icloud.com</option>
+                                    <option value="14">live.jp</option>
+                                    <option value="15">me.com</option>
+                                    <option value="16">mineo.jp</option>
+                                    <option value="17">nifty.com</option>
+                                    <option value="18">outlook.com</option>
+                                    <option value="19">outlook.jp</option>
+                                    <option value="20">yahoo.ne.jp</option>
+                                    <option value="21">ybb.ne.jp</option>
+                                    <option value="22">ymobile.ne.jp</option>                                    
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="label-msg"><p>Message</p></th>
+                            <td><textarea type="text"></textarea></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" value="SEND">
+                </div>
             </div>
         </div>
     </div>
     <footer>
-        <div class="container">
-            <p>©2021 mizuno</p>
-        </div>
+        <p>©2021 mizuno</p>
     </footer>
 </body>
 </html>
