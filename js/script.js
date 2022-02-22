@@ -4,11 +4,17 @@ $(function() {
     //ページローディング後処理
     window.addEventListener('DOMContentLoaded', function(){
         setTimeout(() => {
+            $(".typeCatch").t({
+                speed : 100,
+                caret : true,
+            })
+        }, 2000);
+        setTimeout(() => {
             $('.fadein-menu').each(function(){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateY(10px)');
             });
-        }, 2000);    
+        }, 3500);    
     });
 
     /** TOPへ戻るボタン表示 **/
@@ -34,17 +40,16 @@ $(function() {
     $(document).ready(function(){
         $(".type").t({
             speed : 100,
+            caret:false,
+            // speed_vary:true,
             // mistype:10,
+            // repeat: true,
         })
-        $(".typeCatch").t({
-            speed : 100,
-            caret : false,
-        })
-        const element =document.getElementById('catch')
-        element.addEventListener('transitionend', () => {
-            // アニメーション終了後に実行する内容
-            $(".sub-catch").fadeIn(300);
-        })
+        // const element =document.getElementById('catch')
+        // element.addEventListener('transitionend', () => {
+        //     // アニメーション終了後に実行する内容
+        //     $(".sub-catch").fadeIn(300);
+        // })
     });
 
     /** ふわっと表示 **/

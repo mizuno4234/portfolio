@@ -34,8 +34,32 @@ body {
     width: 100%;
     height: 100%;
     color: white;
-    padding-bottom:20px;
+    // padding-bottom:15%;
     border-bottom:solid 1px white;
+
+}
+.border{
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        border-bottom: solid 2px rgb(252, 252, 252);
+        transform: translateX(-50%);
+        animation: border_anim 3.5s linear forwards;
+    }
+}
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
 }
 header {
     .container {
@@ -99,9 +123,13 @@ header {
     color:rgb(255, 255, 255);
     text-align: center;
     .container {
+        padding-bottom: 10%;
+        border: none;
         h1{
+            &.type{
+                padding-top: 15%;
+            }
             //color: white;
-            padding-top: 465px;
             display: none;
             font-size:120px;
             //text-shadow:$titleShadow;
@@ -123,7 +151,8 @@ header {
 }
 .about-wrapper {
     .container {
-        text-align: center;       
+        text-align: center;     
+        padding-bottom: 5%;  
         .about {
             margin-top: 150px;
             display: flex;
@@ -156,6 +185,7 @@ header {
 }
 .works-wrapper {
     .container {
+        padding-bottom: 10%;
         .sub-container{
             display: flex;
             .left-margin {
@@ -203,6 +233,7 @@ header {
 }
 .contact-wrapper{
     .container{
+        padding-bottom: 5%;
         .form-container{
             margin-top: 50px;
             .form-item {
@@ -321,6 +352,10 @@ footer {
 .fadein {
     opacity : 0;
     transform: translateY(20px);
+    transition-property: all; //変化対象CSS
+    transition-duration: 2s;  //変化の開始から終了までの時間
+    transition-timing-function: ease; //変化の仕方（滑らか）
+    transition-delay: 0s; //変化がいつ始まるか
 }
 .fadein-menu {
     opacity : 0;

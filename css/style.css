@@ -35,8 +35,44 @@ body {
   width: 100%;
   height: 100%;
   color: white;
-  padding-bottom: 20px;
   border-bottom: solid 1px white;
+}
+
+.border {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+}
+
+.border:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  border-bottom: solid 2px #fcfcfc;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: border_anim 3.5s linear forwards;
+          animation: border_anim 3.5s linear forwards;
+}
+
+@-webkit-keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes border_anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 header .container {
@@ -115,12 +151,20 @@ header .header-right a:hover {
   text-align: center;
 }
 
+.top-wrapper .container {
+  padding-bottom: 10%;
+  border: none;
+}
+
 .top-wrapper .container h1 {
-  padding-top: 465px;
   display: none;
   font-size: 120px;
   color: #111;
   -webkit-text-stroke: 1px #fff;
+}
+
+.top-wrapper .container h1.type {
+  padding-top: 15%;
 }
 
 .top-wrapper .container h1 .title {
@@ -137,6 +181,7 @@ header .header-right a:hover {
 
 .about-wrapper .container {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .about-wrapper .container .about {
@@ -174,6 +219,10 @@ header .header-right a:hover {
 
 .about-wrapper .container a:hover {
   color: #69a022;
+}
+
+.works-wrapper .container {
+  padding-bottom: 10%;
 }
 
 .works-wrapper .container .sub-container {
@@ -226,6 +275,10 @@ header .header-right a:hover {
   font-size: 20px;
   text-align: center;
   margin-top: 10px;
+}
+
+.contact-wrapper .container {
+  padding-bottom: 5%;
 }
 
 .contact-wrapper .container .form-container {
@@ -350,6 +403,14 @@ footer {
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .fadein-menu {
