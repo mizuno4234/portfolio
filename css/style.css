@@ -26,15 +26,38 @@
   background: #999;
 }
 
+#top {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#top ::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  /*背景画像設定*/
+  background: url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-6/img/samantha-gades-320967-unsplash.jpg") no-repeat center;
+  background-size: cover;
+}
+
 body {
   font-family: "Objective-bold", sans-serif;
   background-color: black;
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  color: white;
+  margin: 0 auto;
+  color: #fff;
+  background-color: black;
   border-bottom: solid 1px white;
 }
 
@@ -137,7 +160,7 @@ header .header-right a {
 header .header-right a:hover {
   background-color: #cacaca;
   text-shadow: 2px 2px 3px #000;
-  color: black;
+  color: #5a5a5a;
 }
 
 .logo {
@@ -158,7 +181,7 @@ header .header-right a:hover {
 
 .top-wrapper .container h1 {
   display: none;
-  font-size: 120px;
+  font-size: 770%;
   color: #111;
   -webkit-text-stroke: 1px #fff;
 }
@@ -173,7 +196,7 @@ header .header-right a:hover {
 
 .sub-title {
   padding-top: 50px;
-  font-size: 70px;
+  font-size: 304%;
   text-align: center;
   color: #111;
   -webkit-text-stroke: 1px #fff;
@@ -199,18 +222,18 @@ header .header-right a:hover {
 
 .about-wrapper .container .about .about-info .myName {
   margin-top: 0;
-  font-size: 80px;
+  font-size: 304%;
 }
 
 .about-wrapper .container .about .about-info p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 154%;
 }
 
 .about-wrapper .container a {
   display: block;
   margin-top: 150px;
-  font-size: 30px;
+  font-size: 154%;
   color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -272,7 +295,7 @@ header .header-right a:hover {
 
 .works-wrapper .container .sub-container .worksFolder .workList p {
   font-family: "Spectral", serif;
-  font-size: 20px;
+  font-size: 154%;
   text-align: center;
   margin-top: 10px;
 }
@@ -286,8 +309,12 @@ header .header-right a:hover {
 }
 
 .contact-wrapper .container .form-container .form-item {
-  width: 50%;
   margin: 0 auto;
+}
+
+.contact-wrapper .container .form-container .form-item table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-wrapper .container .form-container .form-item table tr th.label-name, .contact-wrapper .container .form-container .form-item table tr th.label-Email {
@@ -299,8 +326,8 @@ header .header-right a:hover {
   content: "必須";
   display: inline-block;
   position: absolute;
-  left: -30px;
-  top: 30px;
+  left: 10px;
+  top: 5px;
   border: 1px solid #CCC;
   padding: 0 5px;
   font-size: 85%;
@@ -318,23 +345,13 @@ header .header-right a:hover {
 
 .contact-wrapper .container .form-container .form-item p {
   font-family: "Spectral", serif;
-  font-size: 30px;
+  font-size: 154%;
 }
 
-.contact-wrapper .container .form-container .form-item .form-name, .contact-wrapper .container .form-container .form-item .form-email, .contact-wrapper .container .form-container .form-item textarea {
+.contact-wrapper .container .form-container .form-item .form-name, .contact-wrapper .container .form-container .form-item .form-email, .contact-wrapper .container .form-container .form-item textarea, .contact-wrapper .container .form-container .form-item .form-domain {
   background-color: #cacaca;
   height: 40px;
-  width: 580px;
-  border: solid 1px #362a2a;
-  border-radius: 5px;
-}
-
-.contact-wrapper .container .form-container .form-item .form-domain {
-  font-family: "Spectral", serif;
-  font-size: 20px;
-  background-color: #cacaca;
-  height: 40px;
-  width: 180px;
+  width: 100%;
   border: solid 1px #362a2a;
   border-radius: 5px;
 }
@@ -387,12 +404,14 @@ header .header-right a:hover {
 }
 
 footer {
+  position: relative;
   font-size: 30px;
-  margin-top: 30px;
   height: 90px;
   text-align: center;
   letter-spacing: 2.1px;
   color: white;
+  background-color: #000;
+  z-index: 1;
 }
 
 .far {
@@ -428,5 +447,160 @@ footer {
 .shadow_img {
   -webkit-filter: drop-shadow(5px 5px 5px #aaa);
           filter: drop-shadow(5px 5px 5px #aaa);
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 1%;
+  right: 50%;
+  opacity: 0;
+  /*矢印の動き1秒かけて永遠にループ*/
+  -webkit-animation: arrowmove 1s ease-in-out infinite;
+          animation: arrowmove 1s ease-in-out infinite;
+}
+
+.scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: -20px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.scrolldown ::before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 20px;
+  background: #eee;
+  -webkit-transform: skewX(-31deg);
+          transform: skewX(-31deg);
+}
+
+.scrolldown ::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*矢印の形状*/
+  width: 1px;
+  height: 50px;
+  background: #eee;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@-webkit-keyframes arrowmove {
+  0% {
+    bottom: 1%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 1%;
+  }
+}
+@keyframes arrowmove {
+  0% {
+    bottom: 1%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 1%;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-wrapper .container h1 {
+    font-size: 500%;
+  }
+  .container .header-right {
+    display: none;
+  }
+  .container .openbtn4 {
+    position: relative;
+    /*ボタン内側の基点となるためrelativeを指定*/
+    background: #D54884;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    left: 350px;
+    top: 10px;
+    /*ボタン内側*/
+    /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+  }
+  .container .openbtn4 span {
+    display: inline-block;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 5px;
+    background: #fff;
+    width: 45%;
+  }
+  .container .openbtn4 span:nth-of-type(1) {
+    top: 13px;
+  }
+  .container .openbtn4 span:nth-of-type(2) {
+    top: 19px;
+  }
+  .container .openbtn4 span:nth-of-type(3) {
+    top: 25px;
+  }
+  .container .openbtn4 span:nth-of-type(3)::after {
+    content: "Menu";
+    /*3つ目の要素のafterにMenu表示を指定*/
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    color: #fff;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+  .container .openbtn4.active span:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  .container .openbtn4.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .container .openbtn4.active span:nth-of-type(3) {
+    top: 26px;
+    left: 18px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  .container .openbtn4.active span:nth-of-type(3)::after {
+    content: "Close";
+    /*3つ目の要素のafterにClose表示を指定*/
+    -webkit-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+    top: 5px;
+    left: 4px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
