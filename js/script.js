@@ -1,6 +1,16 @@
 
 $(function() {
 
+    //ページローディング後処理
+    window.addEventListener('DOMContentLoaded', function(){
+        setTimeout(() => {
+            $('.fadein-menu').each(function(){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateY(10px)');
+            });
+        }, 2000);    
+    });
+
     /** TOPへ戻るボタン表示 **/
     var topBtn = $('#page-top');    
     topBtn.hide();
@@ -25,6 +35,15 @@ $(function() {
         $(".type").t({
             speed : 100,
             // mistype:10,
+        })
+        $(".typeCatch").t({
+            speed : 100,
+            caret : false,
+        })
+        const element =document.getElementById('catch')
+        element.addEventListener('transitionend', () => {
+            // アニメーション終了後に実行する内容
+            $(".sub-catch").fadeIn(300);
         })
     });
 
