@@ -4,17 +4,24 @@ $(function() {
     //ページローディング後処理
     window.addEventListener('DOMContentLoaded', function(){
         setTimeout(() => {
-            $(".typeCatch").t({
-                speed : 100,
-                caret : true,
-            })
-        }, 2000);
-        setTimeout(() => {
+            $('.type').each(function(){
+                $(this).css('position','fixed');
+                $(this).css('left','11.35%');
+            });
             $('.fadein-menu').each(function(){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateY(10px)');
             });
-        }, 3500);    
+        }, 3500); 
+        setTimeout(() => {
+            $('.scrolldown').each(function(){
+                $(this).css('opacity','1');
+            });
+        }, 4500);    
+    });
+
+    $(".openbtn4").click(function () {
+        $(this).toggleClass('active');
     });
 
     /** TOPへ戻るボタン表示 **/
