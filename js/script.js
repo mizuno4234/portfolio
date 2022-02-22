@@ -4,14 +4,14 @@ $(function() {
     //ページローディング後処理
     window.addEventListener('DOMContentLoaded', function(){
         setTimeout(() => {
-            $('.type').each(function(){
-                $(this).css('position','fixed');
-                $(this).css('left','11.35%');
-            });
             $('.fadein-menu').each(function(){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateY(10px)');
             });
+            // $('.type').each(function(){
+            //     $(this).css('position','fixed');
+            //     $(this).css('left','7%');
+            // });
         }, 3500); 
         setTimeout(() => {
             $('.scrolldown').each(function(){
@@ -47,7 +47,7 @@ $(function() {
     $(document).ready(function(){
         $(".type").t({
             speed : 100,
-            caret:false,
+            caret:true,
             // speed_vary:true,
             // mistype:10,
             // repeat: true,
